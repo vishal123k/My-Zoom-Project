@@ -1,0 +1,199 @@
+/* videoComponent.module.css */
+
+.meetVideoContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #0f0f0f;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .chatRoom {
+    width: 25%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-left: 2px solid #333;
+    overflow-y: auto;
+  }
+  
+  .chatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .chattingDisplay {
+    flex-grow: 1;
+    margin-top: 16px;
+    overflow-y: auto;
+    background-color: #292929;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  
+  .chattingDisplay p {
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .chattingArea {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    align-items: center;
+    color: #fff;
+  }
+  .chattingArea label{
+    color: #fff;
+  }
+  
+  .buttonContainers {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    gap: 16px;
+    z-index: 1000;
+  }
+  
+  .meetUserVideo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #ffffff40;
+    box-shadow: 0 0 10px #000;
+    z-index: 100;
+  }
+  
+  .conferenceView {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    padding: 20px;
+    overflow-y: auto;
+    align-content: start;
+  }
+  
+  .conferenceView video {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-radius: 16px;
+    border: 2px solid #ffffff20;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+
+  /* Lobby Container Styles */
+.lobbyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3f51b5, #1a237e);
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: fadeIn 1s ease-out;
+}
+
+.lobbyContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  animation: textFadeIn 1s ease-out;
+}
+
+/* TextField Styling */
+.MuiTextField-root {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.MuiInputBase-root {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.MuiInputLabel-root {
+  font-size: 1.1rem;
+  color: #3f51b5;
+}
+
+/* Button Styling */
+.MuiButton-root {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #FF9839, #FF5C00);
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.MuiButton-root:hover {
+  background: linear-gradient(45deg, #FF5C00, #FF9839);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Styling */
+video {
+  border-radius: 15px;
+  margin-top: 20px;
+  max-width: 100%;
+  max-height: 300px;
+  border: 5px solid #FF9839;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
